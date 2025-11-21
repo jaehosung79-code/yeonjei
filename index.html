@@ -24,29 +24,29 @@ html, body {
 h2 {
     text-align: center;
     color: #fff;
-    margin: 6px 0;
+    margin: 8px 0;
     font-size: 0.7em;
 }
 
 /* 컨테이너 */
 .container {
     background: #1e1e1e;
-    padding: 6px;
+    padding: 8px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    margin: 6px 6px 4px 6px;
+    margin: 6px 6px 8px 6px;
 }
 
 /* 달력 */
 #monthNav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     font-size: 0.8em;
 }
 #monthNav button {
     cursor: pointer;
-    padding: 4px 6px;
+    padding: 6px 8px;
     border-radius: 4px;
 }
 #calendar {
@@ -55,12 +55,12 @@ h2 {
     gap: 2px;
     font-size: 0.8em;
     line-height: 1.5;
-    transform: scaleY(0.9); /* 높이 10% 감소 */
+    transform: scaleY(0.85); /* 달력 높이 15% 줄임 */
 }
 .calendar-weekday {
     text-align: center;
     font-weight: bold;
-    padding: 2px 0;
+    padding: 4px 0;
 }
 .calendar-day {
     padding: 2px;
@@ -69,7 +69,7 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid transparent;
-    height: 36px; /* 이전 40px -> 36px */
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +84,7 @@ h2 {
     justify-content: space-between;
     gap: 6px;
     flex-wrap: wrap;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 .action-btn {
     border: none;
@@ -106,14 +106,13 @@ h2 {
     cursor: pointer;
     width: 100%;
     padding: 6px;
-    margin-top: 4px;
+    margin-top: 6px;
     font-size: 0.72em;
 }
 
 /* 운동 테이블 */
 #exerciseContainer {
-    max-height: none;
-    margin-top: 4px;
+    margin-top: 6px;
     transform: scaleY(0.8); /* 높이 20% 감소 */
 }
 table {
@@ -131,7 +130,7 @@ th, td {
     text-align: center;
 }
 th { background: #333; color: white; }
-tr { height: 48px; } /* 이전 60px -> 48px */
+tr { height: 48px; }
 
 /* 모달 */
 .modal-overlay {
@@ -194,14 +193,13 @@ footer {
     <div id="calendar"></div>
 </div>
 
-<!-- 버튼 -->
+<!-- 버튼 & 운동 테이블 -->
 <div class="container">
     <div class="date-row">
         <button class="action-btn delete-btn" id="deleteBtn">🗑 삭제</button>
         <button class="action-btn add-btn" id="addExerciseBtn">+ 운동 추가</button>
     </div>
 
-    <!-- 운동 테이블 -->
     <div id="exerciseContainer">
         <table>
             <thead>
@@ -216,7 +214,7 @@ footer {
 
 <footer>만든 사람 : <strong>Jaeho</strong></footer>
 
-<!-- 모달 -->
+<!-- 저장/추가 모달 -->
 <div id="modalOverlay" class="modal-overlay">
   <div class="modal">
     <span id="modalMessage"></span><br>
@@ -224,7 +222,6 @@ footer {
   </div>
 </div>
 
-<!-- 운동 추가 모달 -->
 <div id="addExerciseModal" class="modal-overlay">
   <div class="modal">
     <span>추가할 운동 이름:</span><br>
