@@ -55,6 +55,7 @@ h2 {
     gap: 2px;
     font-size: 0.8em;
     line-height: 1.5;
+    transform: scaleY(0.9); /* 높이 10% 감소 */
 }
 .calendar-weekday {
     text-align: center;
@@ -68,7 +69,7 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid transparent;
-    height: 40px;
+    height: 36px; /* 이전 40px -> 36px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,6 +114,7 @@ h2 {
 #exerciseContainer {
     max-height: none;
     margin-top: 4px;
+    transform: scaleY(0.8); /* 높이 20% 감소 */
 }
 table {
     width: 100%;
@@ -129,7 +131,7 @@ th, td {
     text-align: center;
 }
 th { background: #333; color: white; }
-tr { height: 60px; }
+tr { height: 48px; } /* 이전 60px -> 48px */
 
 /* 모달 */
 .modal-overlay {
